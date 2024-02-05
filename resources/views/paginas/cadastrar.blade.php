@@ -73,20 +73,26 @@
                         <input type="nome" class="form-control auth-input" id="nome" name="nome" required>
                     </div>
                     <div class="mb-3">
+                        <label for="email" class="form-label auth-label">email</label>
+                        <input type="email" class="form-control auth-input" id="email" name="email" required>
+                    </div>
+
+                    <div class="mb-3">
                         <label for="senha" class="form-label auth-label">Senha</label>
                         <input type="password" class="form-control auth-input" id="senha" name="senha" required>
                     </div>
 
                     <div class="d-grid gap-2">
                         <a href="/index" class="btn btn-outline-light auth-button">
-                            Entrar
+                            Cadastrar
                         </a>
                     </div>
 
                     <div class="text-center mt-3">
-                        <p class="text-muted">Não possui conta? <a href="/cadastrar" class="auth-link">Cadastre-se</a>
+                        <p class="text-muted">Já possui uma conta? <a href="/login" class="auth-link">Entrar</a>
                         </p>
                     </div>
+                    
                 </form>
             </div>
         </div>

@@ -72,38 +72,46 @@
 </head>
 
 <body>
+
+    
     <div class="container mt-5 text-centertcx-centertcx-centertcx-center">
-    <div class="container mt-5tcx-centercx-centercx-centertcx-centertcx-center" style="max-width: 600px;">
-        <h1 class="mb-3">Agenda</h1>
-        <div class="form-container">
-            <form method="get" action="/schedule/salvar">
-                @csrf
-                <div class="mb-3" style="margin-top: 20px;"><label for="title" class="form-label">Título:</label>
-                    <input type="text" class="form-control" name="titulo"
-                        style="background-color: rgba(255, 255, 255, 0.2);color: #fff;border: none;border-radius: 5px;padding: 10px;width: 100%;">
-                </div>
+        <div class="container mt-5tcx-centercx-centercx-centertcx-centertcx-center" style="max-width: 600px;">
+            <h1 class="mb-3">Agenda</h1>
+            <div class="form-container">
+                <form method="get" action="/schedule/salvar">
+                    @csrf
+                    <div class="mb-3" style="margin-top: 20px;"><label for="title"
+                            class="form-label">Título:</label>
+                        <input type="text" class="form-control" name="titulo"
+                            style="background-color: rgba(255, 255, 255, 0.2);color: #fff;border: none;border-radius: 5px;padding: 10px;width: 100%;">
+                    </div>
 
-                <div class="mb-3" style="margin-top: 20px;"><label for="start_time" class="form-label">Hora de
-                        Início:</label>
-                    <input type="datetime-local" class="form-control" name="start_time"
-                        style="background-color: rgba(255, 255, 255, 0.2);color: #fff;border: none;border-radius: 5px;padding: 10px;width: 100%;">
-                </div>
+                    <div class="mb-3" style="margin-top: 20px;"><label for="start_time" class="form-label">Hora de
+                            Início:</label>
+                        <input type="datetime-local" class="form-control" name="start_time"
+                            style="background-color: rgba(255, 255, 255, 0.2);color: #fff;border: none;border-radius: 5px;padding: 10px;width: 100%;">
+                    </div>
 
-                <div class="mb-3" style="margin-top: 20px;"><label for="end_time" class="form-label">Hora de
-                        Término:</label>
-                    <input type="datetime-local" class="form-control" name="end_time"
-                        style="background-color: rgba(255, 255, 255, 0.2);color: #fff;border: none;border-radius: 5px;padding: 10px;width: 100%;">
-                </div>
+                    <div class="mb-3" style="margin-top: 20px;"><label for="end_time" class="form-label">Hora de
+                            Término:</label>
+                        <input type="datetime-local" class="form-control" name="end_time"
+                            style="background-color: rgba(255, 255, 255, 0.2);color: #fff;border: none;border-radius: 5px;padding: 10px;width: 100%;">
+                    </div>
 
-                {{-- Redirecionando pra Schedule --}}
-                <a href="/schedule">
                     <button type="submit" class="btn btn-primary"
                         style="background-color: #4caf50;color: #fff;border: none;border-radius: 5px;padding: 10px;width: 100%;">Adicionar
                         Tarefa</button>
-                </a>
-            </form>
+
+                        <br>
+                        <br>
+                        
+                    <a href="/schedule"><button type="submit" class="btn btn-primary"
+                    style="background-color: #4caf50;color: #fff;border: none;border-radius: 5px;padding: 10px;width: 100%;">Consultar Tarefas</button>
+                    </a>
+                        
+                </form>
+            </div>
         </div>
-    </div>
 </body>
 
 </html>
