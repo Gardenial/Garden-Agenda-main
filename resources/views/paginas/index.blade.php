@@ -14,8 +14,29 @@
     </script>
     <style>
         body {
-            background-color: #333;
+            background-color: #2c5045;
             color: #fff;
+        }
+
+
+        .form-label {
+            font-weight: bold;
+            color: rgb(0, 58, 5);
+            margin-bottom: 5px;
+            display: block;
+        }
+
+        .form-control {
+            border-radius: 5px;
+            border: 1px solid rgb(0, 0, 0);
+            padding: 10px;
+            font-size: 16px;
+            width: 100%;
+        }
+
+        .form-control:focus {
+            border-color: #4caf50;
+            box-shadow: 0 0 3px 0 #4caf50;
         }
 
         .container {
@@ -52,17 +73,26 @@
             width: 100%;
         }
 
-        button {
-            background-color: #4caf50;
-            color: #fff;
-            border: none;
-            border-radius: 5px;
-            padding: 10px;
+
+        .btn-primary {
             width: 100%;
+            background-color: #4caf50;
+            border-width: 4px;
+            border: #4caf50;
+            border-radius: 5px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .btn-primary:hover {
+            background-color: #25583600;
+            color: #4caf50;
         }
 
         .form-container {
-            background-color: rgba(106, 212, 106, 0.568);
+            background-color: rgb(255, 255, 255);
             border-radius: 5px;
             padding: 20px;
             margin-top: 20px;
@@ -73,43 +103,36 @@
 
 <body>
 
-    
     <div class="container mt-5 text-centertcx-centertcx-centertcx-center">
         <div class="container mt-5tcx-centercx-centercx-centertcx-centertcx-center" style="max-width: 600px;">
-            <h1 class="mb-3">Agenda</h1>
+            <h1 class="mb-3" style="text-align: center">Agenda</h1>
             <div class="form-container">
                 <form method="get" action="/schedule/salvar">
                     @csrf
                     <div class="mb-3" style="margin-top: 20px;"><label for="title"
                             class="form-label">Título:</label>
-                        <input type="text" class="form-control" name="titulo"
-                            style="background-color: rgba(255, 255, 255, 0.2);color: #fff;border: none;border-radius: 5px;padding: 10px;width: 100%;">
+                        <input type="text" class="form-control" name="titulo">
                     </div>
 
                     <div class="mb-3" style="margin-top: 20px;"><label for="start_time" class="form-label">Hora de
                             Início:</label>
-                        <input type="datetime-local" class="form-control" name="start_time"
-                            style="background-color: rgba(255, 255, 255, 0.2);color: #fff;border: none;border-radius: 5px;padding: 10px;width: 100%;">
+                        <input type="datetime-local" class="form-control" name="start_time">
                     </div>
 
                     <div class="mb-3" style="margin-top: 20px;"><label for="end_time" class="form-label">Hora de
                             Término:</label>
-                        <input type="datetime-local" class="form-control" name="end_time"
-                            style="background-color: rgba(255, 255, 255, 0.2);color: #fff;border: none;border-radius: 5px;padding: 10px;width: 100%;">
+                        <input type="datetime-local" class="form-control" name="end_time">
                     </div>
 
-                    <button type="submit" class="btn btn-primary"
-                        style="background-color: #4caf50;color: #fff;border: none;border-radius: 5px;padding: 10px;width: 100%;">Adicionar
+                    <button type="submit" class="btn btn-primary">Adicionar
                         Tarefa</button>
-
-                        <br>
-                        <br>
-                        
-                    <a href="/schedule"><button type="submit" class="btn btn-primary"
-                    style="background-color: #4caf50;color: #fff;border: none;border-radius: 5px;padding: 10px;width: 100%;">Consultar Tarefas</button>
-                    </a>
-                        
+                    <br>
+                    <br>
                 </form>
+
+
+                <a class="btn btn-primary" href="/schedule">Consultar Tarefas
+                </a>
             </div>
         </div>
 </body>

@@ -8,10 +8,22 @@ use Illuminate\Http\Request;
 
 class Schedule extends Controller
 {
-    public function index() {
+    public function consultar() {
         $tasks = scheduleModel::all();
         return view('paginas.schedule', compact('tasks'));
 }//Fim do Método
+
+public function editar($tasks)
+{
+    $dado = scheduleModel::findOrFail($tasks);
+    return view('paginas.editar', compact('dado'));
+}//Fim do Método Editar
+
+public function atualizar(Request $request, $tasks)
+{
+    scheduleModel::where( 'id' ,$tasks)->update($request->all()); 
+    return redirect('schedule');
+}//Fim do Método Atualizar
 
 public function store(Request $request) {
 
@@ -26,13 +38,7 @@ public function store(Request $request) {
     $newTask->start_time    = $inicioTarefa; 
     $newTask->end_time      = $fimTarefa;
     $newTask ->save();
-
-    $tasks = scheduleModel::all();
-    return view('paginas.schedule', compact('tasks'))->with('success', 'Tarefa criada com sucesso!');
+    return redirect('index');
 }//Fim do Método
 
-public function consultar()
-{
-    return view('paginas.schedule');
-} // Fim do método Consultar
 }//Fim da Classe
