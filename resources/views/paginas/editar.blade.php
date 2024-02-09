@@ -2,11 +2,6 @@
 
     <form action="../atualizar/{{ $dado->id }}" method="get" class="container mt-5">
         <div class="mb-3">
-            <label for="id" class="form-label">Id:</label>
-            <input type="number" id="id" name="id" value="{{ $dado->id }}" class="form-control" disabled
-                required>
-        </div>
-        <div class="mb-3">
             <label for="titulo" class="form-label">Nome:</label>
             <input type="text" id="titulo" name="titulo" value="{{ $dado->titulo }}" class="form-control"
                 required>
@@ -86,6 +81,7 @@
         }
 
         .btn {
+            border: solid 2px #4caf50;
             border-radius: 5px;
             padding: 10px 20px;
             font-size: 16px;
@@ -96,10 +92,11 @@
         .btn:hover {
             background-color: #4caf50;
             color: #fff;
-            border: #4caf50;
+            border: solid 2px #4caf50;
         }
 
         .btn-outline-primary {
+            padding: 8px 20px;
             border: 2px solid #4caf50;
             color: #4caf50;
         }
@@ -107,7 +104,7 @@
         .btn-outline-primary:hover {
             background-color: #4caf50;
             color: #fff;
-            border: none;
+            border: solid 2px #4caf50
         }
 
         .modal {
@@ -138,6 +135,7 @@
 
         .btn-secondary:hover {
             background-color: #1d5c49;
+            border: none;
         }
     </style>
 </x-layout>

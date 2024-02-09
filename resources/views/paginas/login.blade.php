@@ -65,7 +65,7 @@
     <div class="container mt-5 auth-container">
         <div class="row justify-content-center">
             <div class="col-md-4 auth-card">
-                <form action="login/salvar" class="auth-form">
+                <form action="login/salvar" class="auth-form" method="get">
                     @csrf
                     <h2 class="text-center mb-4 auth-title">Entrar</h2>
                     <div class="mb-3">
@@ -78,9 +78,10 @@
                     </div>
 
                     <div class="d-grid gap-2">
-                        <a href="/index" class="btn btn-outline-light auth-button">
+                        
+                        <button  href="/index" type="submit" name="login" class="btn btn-outline-light auth-button">
                             Entrar
-                        </a>
+                        </button>
                     </div>
 
                     <div class="text-center mt-3">

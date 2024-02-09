@@ -14,4 +14,4 @@ Route::get('/cadastrar', [App\Http\Controllers\cadastrar::class, "cadastrar"]);
 Route::get('/schedule',  [App\Http\Controllers\Schedule::class,'consultar']);
 Route::get('/editar/{id}',[App\Http\Controllers\Schedule::class,'editar']);
 Route::get('/atualizar/{id}'  ,[App\Http\Controllers\Schedule::class,'atualizar']);
-Route::delete('/excluir/{id}' , [App\Http\Controllers\Schedule::class,'deletar']);
+Route::get('/excluir/{id}', [App\Http\Controllers\Schedule::class,'excluir']);

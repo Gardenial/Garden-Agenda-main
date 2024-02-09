@@ -25,6 +25,12 @@ public function atualizar(Request $request, $tasks)
     return redirect('schedule');
 }//Fim do Método Atualizar
 
+public function excluir(Request $request, $id)
+{
+    scheduleModel::where('id',$id)->delete($request->all());
+    return redirect('schedule');
+}//Fim do Exlcuir
+
 public function store(Request $request) {
 
     $titulo         = $request->input('titulo');

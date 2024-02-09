@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 use  App\Models\loginModel;
 class login extends Controller
@@ -13,6 +14,7 @@ class login extends Controller
         return view('paginas.login')->With('dados', $dados);
         
     }//Fim do Método login
+
 
     public function store(Request $request)
     {

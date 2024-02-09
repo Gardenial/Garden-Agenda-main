@@ -78,7 +78,7 @@
             width: 100%;
             background-color: #4caf50;
             border-width: 4px;
-            border: #4caf50;
+            border: solid 4px #4caf50;
             border-radius: 5px;
             padding: 10px 20px;
             font-size: 16px;
@@ -89,7 +89,9 @@
         .btn-primary:hover {
             background-color: #25583600;
             color: #4caf50;
+            border: solid 4px #68d468;
         }
+
 
         .form-container {
             background-color: rgb(255, 255, 255);
